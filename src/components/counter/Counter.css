@@ -1,0 +1,14 @@
+.countButton{
+    background-color: darkcyan;
+    width: 100px;
+    margin: 10px;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    border-style: none;
+}
+
+.count{
+    font-size: 50px;
+    padding: 10px;
+}
