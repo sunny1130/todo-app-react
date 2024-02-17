@@ -23,7 +23,7 @@ function App() {
       <MyFirstClassComponent />
       <h1>{person.name}</h1>
       <div>{person.printSocial()}</div>
-      <Counter/>
+      <Counter />
       
     </div>
   )
