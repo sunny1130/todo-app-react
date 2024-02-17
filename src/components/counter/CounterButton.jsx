@@ -9,14 +9,12 @@ export default function CounterButton({byvar,incrementMethod,decrementMethod}) {
     return(
         <div>
             <div>
-                <button className="countButton" style={buttonstyle} onClick={incrementCounter}>+{byvar}</button>
+                <button className="countButton" style={buttonstyle} onClick={() => incrementMethod(byvar)}>+{byvar}</button>
                 <button className="countButton" style={buttonstyle} onClick={decrementCounter}>-{byvar}</button>
             </div>
         </div>
     )
-    function incrementCounter(){
-        incrementMethod(byvar)
-    }
+    
     function decrementCounter(){
         decrementMethod(byvar)
     }
