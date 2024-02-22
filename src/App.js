@@ -1,8 +1,6 @@
-import MyFirstFunctionComponent from './components/learning-examples/MyFunctionComponent'
-import {MySecondFunctionComponent} from './components/learning-examples/MyFunctionComponent'
-import MyFirstClassComponent from './components/learning-examples/MyClassComponent'
+
 import './App.css';
-import Counter from './components/counter/Counter';
+import ToDoApp from './components/todo/ToDoApp';
 
 const person = {
   name: 'sunmeet',
@@ -17,14 +15,15 @@ const person = {
 function App() {
   return (
     <div className="App">
-      My ToDo App
-      <MyFirstFunctionComponent />
+      
+      {/*<MyFirstFunctionComponent />
       <MySecondFunctionComponent />
       <MyFirstClassComponent />
       <h1>{person.name}</h1>
       <div>{person.printSocial()}</div>
-      <Counter />
-      
+      <Counter />*/}
+      <ToDoApp />
+
     </div>
   )
 }
