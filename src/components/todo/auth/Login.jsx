@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "./Auth"
 function Login(){
 
     const [username,setUserName] = useState("")
@@ -7,6 +8,7 @@ function Login(){
     const [successLogin,setSuccessLogin] = useState(false)
     const [unsuccessLogin,setUnSuccessLogin] = useState(false)
     const navigate = useNavigate()
+    const auth = useAuth()
 
     function handlePasswordChange(event){
         setPassword(event.target.value)
@@ -19,10 +21,12 @@ function Login(){
         if(username === 'a' && password === 'a'){
             setSuccessLogin(true)
             setUnSuccessLogin(false)
+            auth.setisAuthenticated(true)
             navigate(`/welcome/${username}`)
         }else{
             setSuccessLogin(false)
             setUnSuccessLogin(true)
+            auth.setisAuthenticated(false)
         }
     }
 
